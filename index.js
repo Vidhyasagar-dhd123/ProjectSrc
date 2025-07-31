@@ -30,10 +30,10 @@ const loadData = (query="",start=0,end=25)=>{
             index.innerHTML = i
             tr.appendChild(index)
             for(let d in data){
-                if(d==="Project description") continue;
                 const td = document.createElement('td')
                 let value = data[d][i]
-                if(value?.toLowerCase().includes(query.toLowerCase())&&query!==""&&(d==="Project name"||d==="Project admin"||d==="Tech stack"||d==="mentor 1"||d=="mentor 2"))
+                console.log(d)
+                if(value?.toLowerCase().includes(query.toLowerCase())&&query!==""&&(d==="Project name"||d==="Project description"||d==="Project admin"||d==="Tech stack"||d==="mentor 1"||d=="mentor 2"))
                     {
                         label = true
                         count++ 
@@ -50,6 +50,7 @@ const loadData = (query="",start=0,end=25)=>{
                 }
                 else
                 td.innerHTML = data[d][i]
+                if(d!=="Project description")
                 tr.appendChild(td)
             }
             if(label||query===""){
