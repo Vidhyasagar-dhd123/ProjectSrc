@@ -75,6 +75,7 @@ body,html{
 .table-cont{
     overflow: auto;
     height: 70%;
+    padding: 20px;
 }
 
 table{
@@ -94,6 +95,10 @@ th{
 
 td{
     height: 20px;
+}
+
+td:first-child{
+    text-align: center;
 }
 
 #from, #to{
